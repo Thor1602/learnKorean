@@ -1,182 +1,48 @@
 {
-  "subject_marker":
-[
-  {
-    "Topic_Kor": "-가/-이",
-    "Description_Eng": "Subject Marker",
-    "Rules": [
-        "Subject ends with a vowel: +이",
-        "Subject ends with a consonant: +가"
-      ],
-    "Examples": [
-        "의사가 사과를 먹어요. The doctor eats an apple.",
-        "선생님이 배를 먹어요. The teacher eats a pear"
+  "all_topics": [
+    {
+      "subject_marker": [
+        {
+          "Title": "-\uac00/-\uc774"
+        },
+        {
+          "Description": "Subject Marker"
+        },
+        {
+          "Rules": [
+            "Subject ends with a vowel: +\uc774",
+            "Subject ends with a consonant: +\uac00"
+          ]
+        },
+        {
+          "Examples": [
+            "\uc758\uc0ac\uac00 \uc0ac\uacfc\ub97c \uba39\uc5b4\uc694. The doctor eats an apple.",
+            "\uc120\uc0dd\ub2d8\uc774 \ubc30\ub97c \uba39\uc5b4\uc694. The teacher eats a pear"
+          ]
+        }
       ]
-  }
-],
-  "object_marker":
-[
-  {
-    "Topic_Kor": "-을/-를",
-    "Description_Eng": "Object Marker",
-    "Rules": [
-      "Object ends with a vowel: + 를",
-      "Object ends with a consonant: + 을"
-    ],
-    "Examples": [
-      "저는 책을 읽어요. I read a book.",
-      "그는 커피를 사요. He buys coffee."
-    ]
-  }
-],
-  "ㄷ_irregular":
-[
-  {
-    "Topic_Kor": "",
-    "Description_Eng": "",
-    "Rules": [
-      "",
-      ""
-    ],
-    "Examples": [
-      "",
-      ""
-    ]
-  }
-],
-    "르_irregular":
-[
-  {
-    "Topic_Kor": "",
-    "Description_Eng": "",
-    "Rules": [
-      "",
-      ""
-    ],
-    "Examples": [
-      "",
-      ""
-    ]
-  }
-],
-    "ㅅ_irregular":
-[
-  {
-    "Topic_Kor": "",
-    "Description_Eng": "",
-    "Rules": [
-      "",
-      ""
-    ],
-    "Examples": [
-      "",
-      ""
-    ]
-  }
-],
-    "too_much":
-[
-  {
-    "Topic_Kor": "",
-    "Description_Eng": "",
-    "Rules": [
-      "",
-      ""
-    ],
-    "Examples": [
-      "",
-      ""
-    ]
-  }
-],
-    "linking_verbs":
-[
-  {
-    "Topic_Kor": "",
-    "Description_Eng": "",
-    "Rules": [
-      "",
-      ""
-    ],
-    "Examples": [
-      "",
-      ""
-    ]
-  }
-],
-    "prepositions_of_place":
-[
-  {
-    "Topic_Kor": "",
-    "Description_Eng": "",
-    "Rules": [
-      "",
-      ""
-    ],
-    "Examples": [
-      "",
-      ""
-    ]
-  }
-],
-    "Shall_we_...?":
-[
-  {
-    "Topic_Kor": "",
-    "Description_Eng": "",
-    "Rules": [
-      "",
-      ""
-    ],
-    "Examples": [
-      "",
-      ""
-    ]
-  }
-],
-    "about_approximately":
-[
-  {
-    "Topic_Kor": "",
-    "Description_Eng": "",
-    "Rules": [
-      "",
-      ""
-    ],
-    "Examples": [
-      "",
-      ""
-    ]
-  }
-],
-    "future_tense":
-[
-  {
-    "Topic_Kor": "",
-    "Description_Eng": "",
-    "Rules": [
-      "",
-      ""
-    ],
-    "Examples": [
-      "",
-      ""
-    ]
-  }
-],
-    "linking_verbs2":
-[
-  {
-    "Topic_Kor": "",
-    "Description_Eng": "",
-    "Rules": [
-      "",
-      ""
-    ],
-    "Examples": [
-      "",
-      ""
-    ]
-  }
-]
+    },
+    {
+      "object_marker": [
+        {
+          "Title": "-\uac00/-\uc774"
+        },
+        {
+          "Description": "Object Marker"
+        },
+        {
+          "Rules": [
+            "Subject ends with a vowel: +\uc774",
+            "Subject ends with a consonant: +\uac00"
+          ]
+        },
+        {
+          "Examples": [
+            "\uc758\uc0ac\uac00 \uc0ac\uacfc\ub97c \uba39\uc5b4\uc694. The doctor eats an apple.",
+            "\uc120\uc0dd\ub2d8\uc774 \ubc30\ub97c \uba39\uc5b4\uc694. The teacher eats a pear"
+          ]
+        }
+      ]
+    }
+  ]
 }
