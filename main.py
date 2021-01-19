@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, url_for, render_template, request, redirect, session, flash
-import dbHelper
-import os
-from werkzeug.utils import secure_filename
-#from flask_helper import *
-import json
+from flask import Flask, url_for, render_template, request, redirect, session, jsonify
+from dbHelper import Topics, User
 
 UPLOAD_FOLDER = 'static/assets/img/user_pictures/'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
@@ -12,15 +8,84 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 app = Flask(import_name=__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
+data = []
 @app.before_request
 def make_session_permanent():
     session.permanent = True
+
+@app.route("/topics", methods=['GET', 'POST'])
+def topics():
+    general_info = "-----This info changes constantly and can create difficulties for web scraping.-----"
+    topic = Topics()
+    global data
+    if request.method == "POST":
+        print(request.form)
+        if 'homepage' in request.form:
+            data = ["" for row in range(20)]
+        elif 'subject_marker' in request.form:
+            data = topic.check_topic()[0]
+        elif 'object_marker' in request.form:
+            data = topic.check_topic()[1]
+        elif 'shiot_irregular' in request.form:
+            data = topic.check_topic()[2]
+        elif 'speech_levels' in request.form:
+            data = topic.check_topic()[3]
+        elif 'digeut_irregular' in request.form:
+            data = topic.check_topic()[4]
+        elif 'bieup_irregular' in request.form:
+            data = topic.check_topic()[5]
+        elif 'verb_ending_neyo' in request.form:
+            data = topic.check_topic()[6]
+        elif 'connecting_verbs' in request.form:
+            data = topic.check_topic()[7]
+        elif 'prepositions_of_place' in request.form:
+            data = topic.check_topic()[8]
+    return jsonify(data=data, aaa_general_info=general_info)
+
+@app.route("/refresh", methods=['GET', 'POST'])
+def refresh():
+    general_info = "-----This info changes constantly and can create difficulties for web scraping.-----"
+    topic1 = Topics()
+    all_topics = [[topic[1], topic[2], topic[3]] for topic in topic1.check_topic()]
+    return jsonify(all_topics=all_topics, aaa_general_info=general_info)
+
+
 @app.route("/", methods=['GET', 'POST'])
 def home():
     err = ''
     success = ''
     return render_template("index.html")
+
+@app.route("/admin", methods=['GET', 'POST'])
+def admin():
+    err = ''
+    success = ''
+    topicObj = Topics()
+
+    if request.method == "POST":
+        if 'new_entry' in request.form:
+            topicObj.add_topic(topic=request.form['topic'],
+                               title=request.form['title'],
+                               description=request.form['description'],
+                               rule1=request.form['rule1'],
+                               rule2=request.form['rule2'],
+                               rule3=request.form['rule3'],
+                               rule4=request.form['rule4'],
+                               rule5=request.form['rule5'],
+                               rule6=request.form['rule6'],
+                               rule7=request.form['rule7'],
+                               rule8=request.form['rule8'],
+                               example1=request.form['example1'],
+                               example2=request.form['example2'],
+                               example3=request.form['example3'],
+                               example4=request.form['example4'],
+                               example5=request.form['example5'],
+                               example6=request.form['example6'],
+                               example7=request.form['example7'],
+                               example8=request.form['example8'],
+                               )
+    return render_template("admin.html")
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -37,7 +102,7 @@ def login():
         passw = request.form['password']
 
         try:
-            user = dbHelper.User(name, passw, True)
+            user = User(name, passw, True)
             if user.check_user():
                 session['logged_in'] = True
                 if 'rememberMe' in request.form:

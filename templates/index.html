@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/css/style.css?">
+    <link rel="stylesheet" href="/static/css/jquery.notifyBar.css?">
 </head>
 <body>
 
@@ -14,73 +15,80 @@
     <nav id="sidebar">
         <div class="custom-menu">
             <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                <i class="fa fa-bars"  ></i>
+                <i class="fa fa-bars"></i>
                 <span class="sr-only">Toggle Menu</span>
             </button>
         </div>
         <h1><a class="logo">Korean Learning Library</a></h1>
-        <ul class="list-unstyled components mb-5">
-            <li>
-                <a id="subject_marker"></a>
-            </li>
-            <li>
-                <a id="object_marker"></a>
-            </li>
-            <li>
-                <a id="ㄷ_irregular"></a>
-            </li>
-            <li>
-                <a id="르_irregular"></a>
-            </li>
-            <li>
-                <a id="ㅅ_irregular"></a>
-            </li>
-            <li>
-                <a id="too_much"></a>
-            </li>
-            <li>
-                <a id="linking_verbs"></a>
-            </li>
-            <li>
-                <a id="prepositions_of_place"></a>
-            </li>
-            <li>
-                <a id="Shall_we_...?"></a>
-            </li>
-            <li>
-                <a id="about_approximately"></a>
-            </li>
-            <li>
-                <a id="linking_verbs2"></a>
-            </li>
-            <li>
-                <a id="future_tense"></a>
-            </li>
-        </ul>
+        <form id="topic_list">
+            <ul class="list-unstyled components mb-5" id="topics">
+                <li id="homepage"><a><span>Go to</span><br>Homepage</a></li>
+                <li id="subject_marker"></li>
+                <li id="object_marker"></li>
+                <li id="verb_ending_neyo"></li>
+                <li id="connecting_verbs"></li>
+                <li id="prepositions_of_place"></li>
+                <li></li>
+                <li id="shiot_irregular"></li>
+                <li id="digeut_irregular"></li>
+                <li id="bieup_irregular"></li>
+                <li></li>
+                <li id="speech_levels"></li>
+
+
+            </ul>
+        </form>
+
 
     </nav>
-
     <!-- Page Content  -->
+    {% block content %}
     <div id="content" class="p-4 p-md-5 mt-3 pt-5">
-        <h2 class="mb-4 text-center">-가/-이</h2>
-        <h3 class="mb-4 text-center">Subject Marker</h3>
+
+        <div class="ml-3 mt-3" id="id" hidden></div>
+        <div class="ml-3 mt-3" id="topic" hidden></div>
+        <h2 class="mb-4 text-center" id="title"></h2>
+        <h5 class="mb-4 text-center" id="description"></h5>
         <div class="container rule mx-auto p-3">
             <h5>Rule</h5>
-            <p class="ml-3">Subject ends with a vowel: +이</p>
-            <p class="ml-3">Subject ends with a consonant: +가</p>
+            <div class="ml-3 mt-3" id="rule1"></div>
+            <div class="ml-3 mt-3" id="rule2"></div>
+            <div class="ml-3 mt-3" id="rule3"></div>
+            <div class="ml-3 mt-3" id="rule4"></div>
+            <div class="ml-3 mt-3" id="rule5"></div>
+            <div class="ml-3 mt-3" id="rule6"></div>
+            <div class="ml-3 mt-3" id="rule7"></div>
+            <div class="ml-3 mt-3" id="rule8"></div>
         </div>
         <div class="container example mx-auto mt-3 p-3">
             <h5>Examples</h5>
-            <p class="ml-3">의사가 사과를 먹어요</p>
-            <p class="ml-3">선생님이 사과를 먹어요</p>
+            <div class="ml-3 mt-3" id="example1"></div>
+            <div class="ml-3 mt-3" id="example2"></div>
+            <div class="ml-3 mt-3" id="example3"></div>
+            <div class="ml-3 mt-3" id="example4"></div>
+            <div class="ml-3 mt-3" id="example5"></div>
+            <div class="ml-3 mt-3" id="example6"></div>
+            <div class="ml-3 mt-3" id="example7"></div>
+            <div class="ml-3 mt-3" id="example8"></div>
         </div>
     </div>
-</div>
 
+</div>
+{% endblock %}
 <script src="/static/js/jquery.min.js"></script>
 <script src="/static/js/popper.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
-<script src="/static/js/main.js"></script>
+<script src="/static/js/main.js?"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+<!-- notification popup at the top JS-->
+<script src="static/js/jquery.notifyBar.js"></script>
+<script>
+$(document).ready(function(){
+    refresh();
+    refresh_topic();
+});
+
+</script>
 </body>
 </html>

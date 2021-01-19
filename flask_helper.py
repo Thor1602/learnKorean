@@ -34,9 +34,8 @@ def add_all_topics():
     all_topics["all_topics"] = [topic1, topic2]
     with open('content.json', 'w') as outfile:
         json.dump(all_topics, outfile)
-add_all_topics()
+
 def read_topic():
     with open('content.json') as outfile:
         data = json.load(outfile)
 
-read_topic()

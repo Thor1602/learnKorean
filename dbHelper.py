@@ -4,7 +4,7 @@ from sqlite3 import Error
 class Main:
     def execute_query(self, query_list, commit=False, fetchAll=False, fetchOne=False):
         try:
-            conn = sqlite3.connect("mainsite.db")
+            conn = sqlite3.connect("learnKorean.db")
             c = conn.cursor()
             result = None
             if type(query_list) == str:
@@ -41,8 +41,6 @@ class User(Main):
     def add_user(self):
         query1 ="""CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, password TEXT NOT NULL, remember_me INTEGER NOT NULL)"""
         query2 = "INSERT INTO user (name, password, remember_me) VALUES (?,?,?)", (self.username, self.password, self.remember_me)
-        query_list = [query1, query2]
-        self.execute_query(query2, commit=True)
 
     def del_user(self, name):
         self.execute_query(query_list='DELETE FROM user WHERE name = ' + name + '', commit=True)
@@ -58,4 +56,48 @@ class User(Main):
                 return True
             else:
                 return False
+class Topics(Main):
+    def add_topic(self, title, description, rule1, example1, topic, rule2="", rule3="", rule4="", rule5="", rule6="", rule7="", rule8="", example2="", example3="", example4="", example5="", example6="", example7="", example8=""):
+        values = (topic, title, description,
+                  rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8,
+                  example1, example2, example3, example4, example5, example6, example7, example8)
+        query2 = 'INSERT INTO topics VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)'
+        try:
+            conn = sqlite3.connect("learnKorean.db")
+            c = conn.cursor()
+            c.execute(query2, values)
+            conn.commit()
+        except Error as e:
+            print(e)
+        finally:
+            c.close()
+            conn.close()
 
+    def update_topic(self, id, title, description, rule1, example1, topic, rule2, rule3, rule4, rule5, rule6, rule7, rule8, example2, example3, example4, example5, example6, example7, example8):
+        values = (id, topic, title, description,
+                  rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8,
+                  example1, example2, example3, example4, example5, example6, example7, example8)
+        query2 = "UPDATE topics SET topic = ? , title = ? , description = ?  WHERE id = ?"
+
+        try:
+            conn = sqlite3.connect("learnKorean.db")
+            c = conn.cursor()
+            c.execute(query2, values)
+            conn.commit()
+        except Error as e:
+            print(e)
+        finally:
+            c.close()
+            conn.close()
+    def del_topic(self, id):
+        self.execute_query(query_list='DELETE FROM topics WHERE id = ' + id + '', commit=True)
+
+    def check_topic(self):
+        #Check columns
+        #query = "PRAGMA table_info(topics)"
+        query = "SELECT * FROM topics"
+        exec_query = self.execute_query(query_list=query, fetchAll=True)
+        if exec_query == None:
+            return False
+        else:
+            return exec_query

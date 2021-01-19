@@ -1,0 +1,96 @@
+{% extends "index.html" %}
+{% block title %}Admin{% endblock %}
+{% block content %}
+<div id="content" class="p-4 p-md-5 mt-3 pt-5">
+    <h1>Admin</h1>
+    <form method="post" action="/admin">
+        <!--    We want to know the ID for the server, but the user can't edit it, so we must hide it.-->
+        <div class="form-group">
+            <label for="id">ID</label>
+            <span class="form-control" name="id" id="id"></span>
+        </div>
+        <div class="form-group">
+            <label for="title">Topic</label>
+            <textarea class="form-control auto-resize" name="topic" id="topic"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <textarea class="form-control auto-resize" name="title" id="title" rows='3' data-min-rows='3'></textarea>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control auto-resize" name="description" id="description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="rule1">Rule 1</label>
+            <textarea class="form-control auto-resize" name="rule1" id="rule1"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="rule2">Rule 2</label>
+            <textarea class="form-control auto-resize" name="rule2" id="rule2"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="rule3">Rule 3</label>
+            <textarea class="form-control auto-resize" name="rule3" id="rule3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="rule4">Rule 4</label>
+            <textarea class="form-control auto-resize" name="rule4" id="rule4"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="rule5">Rule 5</label>
+            <textarea class="form-control auto-resize" name="rule5" id="rule5"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="rule6">Rule 6</label>
+            <textarea class="form-control auto-resize" name="rule6" id="rule6"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="rule7">Rule 7</label>
+            <textarea class="form-control auto-resize" name="rule7" id="rule7"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="rule8">Rule 8</label>
+            <textarea class="form-control auto-resize" name="rule8" id="rule8"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="example1">Example 1</label>
+            <textarea class="form-control auto-resize" name="example1" id="example1"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="example2">Example 2</label>
+            <textarea class="form-control auto-resize" name="example2" id="example2"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="example3">Example 3</label>
+            <textarea class="form-control auto-resize" name="example3" id="example3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="example4">Example 4</label>
+            <textarea class="form-control auto-resize" name="example4" id="example4"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="example5">Example 5</label>
+            <textarea class="form-control auto-resize" name="example5" id="example5"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="example6">Example 6</label>
+            <textarea class="form-control auto-resize" name="example6" id="example6"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="example7">Example 7</label>
+            <textarea class="form-control auto-resize" name="example7" id="example7"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="example8">Example 8</label>
+            <textarea class="form-control auto-resize" name="example8" id="example8"></textarea>
+        </div>
+        <button type="submit" class="btn btn-danger" name="new_entry">NEW ENTRY</button>
+        <button type="submit" class="btn btn-success" name="update">UPDATE</button>
+    </form>
+</div>
+<script src="static/js/autoresize-textarea.js"></script>
+<script>
+    autoResizeTextarea(document.querySelectorAll("textarea.auto-resize"), { maxHeight: 1000 })
+</script>
+{% endblock %}

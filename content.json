@@ -1,47 +1,43 @@
 {
-  "all_topics": [
+  "subject_marker": [
     {
-      "subject_marker": [
-        {
-          "Title": "-\uac00/-\uc774"
-        },
-        {
-          "Description": "Subject Marker"
-        },
-        {
-          "Rules": [
-            "Subject ends with a vowel: +\uc774",
-            "Subject ends with a consonant: +\uac00"
-          ]
-        },
-        {
-          "Examples": [
-            "\uc758\uc0ac\uac00 \uc0ac\uacfc\ub97c \uba39\uc5b4\uc694. The doctor eats an apple.",
-            "\uc120\uc0dd\ub2d8\uc774 \ubc30\ub97c \uba39\uc5b4\uc694. The teacher eats a pear"
-          ]
-        }
+      "Title": "-\uac00/-\uc774"
+    },
+    {
+      "Description": "Subject Marker"
+    },
+    {
+      "Rules": [
+        "Subject ends with a vowel: +\uc774",
+        "Subject ends with a consonant: +\uac00"
       ]
     },
     {
-      "object_marker": [
-        {
-          "Title": "-\uac00/-\uc774"
-        },
-        {
-          "Description": "Object Marker"
-        },
-        {
-          "Rules": [
-            "Subject ends with a vowel: +\uc774",
-            "Subject ends with a consonant: +\uac00"
-          ]
-        },
-        {
-          "Examples": [
-            "\uc758\uc0ac\uac00 \uc0ac\uacfc\ub97c \uba39\uc5b4\uc694. The doctor eats an apple.",
-            "\uc120\uc0dd\ub2d8\uc774 \ubc30\ub97c \uba39\uc5b4\uc694. The teacher eats a pear"
-          ]
-        }
+      "Examples": [
+        "\uc758\uc0ac\uac00 \uc0ac\uacfc\ub97c \uba39\uc5b4\uc694. The doctor eats an apple.",
+        "\uc120\uc0dd\ub2d8\uc774 \ubc30\ub97c \uba39\uc5b4\uc694. The teacher eats a pear"
+      ]
+    }
+  ]
+},
+{
+  "object_marker": [
+    {
+      "Title": "-\uac00/-\uc774"
+    },
+    {
+      "Description": "Object Marker"
+    },
+    {
+      "Rules": [
+        "Subject ends with a vowel: +\uc774",
+        "Subject ends with a consonant: +\uac00"
+      ]
+    },
+    {
+      "Examples": [
+        "\uc758\uc0ac\uac00 \uc0ac\uacfc\ub97c \uba39\uc5b4\uc694. The doctor eats an apple.",
+        "\uc120\uc0dd\ub2d8\uc774 \ubc30\ub97c \uba39\uc5b4\uc694. The teacher eats a pear"
       ]
     }
   ]
