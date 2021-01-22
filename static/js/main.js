@@ -57,6 +57,19 @@ AjaxProcessing('bieup_irregular');
 AjaxProcessing('verb_ending_neyo');
 AjaxProcessing('connecting_verbs');
 AjaxProcessing('prepositions_of_place');
+AjaxProcessing('shall_we');
+AjaxProcessing('approximately');
+//AjaxProcessing('lieul_eu_irregular');
+//AjaxProcessing('lieul_eu_irregular');
+//AjaxProcessing('lieul_eu_irregular');
+//AjaxProcessing('lieul_eu_irregular');
+//AjaxProcessing('lieul_eu_irregular');
+//AjaxProcessing('lieul_eu_irregular');
+//AjaxProcessing('lieul_eu_irregular');
+//AjaxProcessing('lieul_eu_irregular');
+//AjaxProcessing('lieul_eu_irregular');
+
+
 
 function refresh(){
     $.get( "/refresh", function(data) {
@@ -69,6 +82,25 @@ function refresh(){
       $('#verb_ending_neyo').append("<a><span>" + data.all_topics[6][1] + "</span><br>" + data.all_topics[6][2] + "</a>")
       $('#connecting_verbs').append("<a><span>" + data.all_topics[7][1] + "</span><br>" + data.all_topics[7][2] + "</a>")
       $('#prepositions_of_place').append("<a><span>" + data.all_topics[8][1] + "</span><br>" + data.all_topics[8][2] + "</a>")
+      $('#shall_we').append("<a><span>" + data.all_topics[9][1] + "</span><br>" + data.all_topics[9][2] + "</a>")
+      $('#approximately').append("<a><span>" + data.all_topics[10][1] + "</span><br>" + data.all_topics[10][2] + "</a>")
+      $('#lieul_eu_irregular').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[11][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[12][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[13][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[14][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[15][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[16][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[17][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[18][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[19][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[20][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[21][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[22][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[23][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[24][2] + "</a>")
+
+
+
     });
 }
 function refresh_topic(){

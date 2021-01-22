@@ -40,6 +40,40 @@ def topics():
             data = topic.check_topic()[7]
         elif 'prepositions_of_place' in request.form:
             data = topic.check_topic()[8]
+        elif 'shall_we' in request.form:
+            data = topic.check_topic()[9]
+        elif 'approximately' in request.form:
+            data = topic.check_topic()[10]
+        elif 'lieul_eu_irregular' in request.form:
+            data = topic.check_topic()[11]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[12]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[13]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[14]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[15]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[16]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[17]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[18]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[19]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[20]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[21]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[22]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[23]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[24]
+        # elif '' in request.form:
+        #     data = topic.check_topic()[25]
     return jsonify(data=data, aaa_general_info=general_info)
 
 @app.route("/refresh", methods=['GET', 'POST'])
