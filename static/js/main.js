@@ -59,9 +59,9 @@ AjaxProcessing('connecting_verbs');
 AjaxProcessing('prepositions_of_place');
 AjaxProcessing('shall_we');
 AjaxProcessing('approximately');
-//AjaxProcessing('lieul_eu_irregular');
-//AjaxProcessing('lieul_eu_irregular');
-//AjaxProcessing('lieul_eu_irregular');
+AjaxProcessing('linking_verbs');
+AjaxProcessing('even_if');
+AjaxProcessing('after_ing');
 //AjaxProcessing('lieul_eu_irregular');
 //AjaxProcessing('lieul_eu_irregular');
 //AjaxProcessing('lieul_eu_irregular');
@@ -85,9 +85,9 @@ function refresh(){
       $('#shall_we').append("<a><span>" + data.all_topics[9][1] + "</span><br>" + data.all_topics[9][2] + "</a>")
       $('#approximately').append("<a><span>" + data.all_topics[10][1] + "</span><br>" + data.all_topics[10][2] + "</a>")
       $('#lieul_eu_irregular').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[11][2] + "</a>")
-//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[12][2] + "</a>")
-//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[13][2] + "</a>")
-//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[14][2] + "</a>")
+      $('#linking_verbs').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[12][2] + "</a>")
+      $('#even_if').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[13][2] + "</a>")
+      $('#after_ing').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[14][2] + "</a>")
 //      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[15][2] + "</a>")
 //      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[16][2] + "</a>")
 //      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[17][2] + "</a>")

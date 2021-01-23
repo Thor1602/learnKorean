@@ -46,12 +46,12 @@ def topics():
             data = topic.check_topic()[10]
         elif 'lieul_eu_irregular' in request.form:
             data = topic.check_topic()[11]
-        # elif '' in request.form:
-        #     data = topic.check_topic()[12]
-        # elif '' in request.form:
-        #     data = topic.check_topic()[13]
-        # elif '' in request.form:
-        #     data = topic.check_topic()[14]
+        elif 'linking_verbs' in request.form:
+            data = topic.check_topic()[12]
+        elif 'even_if' in request.form:
+            data = topic.check_topic()[13]
+        elif 'after_ing' in request.form:
+            data = topic.check_topic()[14]
         # elif '' in request.form:
         #     data = topic.check_topic()[15]
         # elif '' in request.form:
