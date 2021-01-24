@@ -43,6 +43,12 @@ function AjaxProcessing(btn_id){
                 refresh_topic();
             }
         });
+        if(btn_id == 'homepage'){
+            window.location.href='/home';
+        }
+        else{
+            window.location.href='/';
+        }
         event.preventDefault();
     });
 }
@@ -62,9 +68,9 @@ AjaxProcessing('approximately');
 AjaxProcessing('linking_verbs');
 AjaxProcessing('even_if');
 AjaxProcessing('after_ing');
-//AjaxProcessing('lieul_eu_irregular');
-//AjaxProcessing('lieul_eu_irregular');
-//AjaxProcessing('lieul_eu_irregular');
+AjaxProcessing('maybe_I_might');
+AjaxProcessing('only');
+AjaxProcessing('in_order_to');
 //AjaxProcessing('lieul_eu_irregular');
 //AjaxProcessing('lieul_eu_irregular');
 //AjaxProcessing('lieul_eu_irregular');
@@ -85,19 +91,19 @@ function refresh(){
       $('#shall_we').append("<a><span>" + data.all_topics[9][1] + "</span><br>" + data.all_topics[9][2] + "</a>")
       $('#approximately').append("<a><span>" + data.all_topics[10][1] + "</span><br>" + data.all_topics[10][2] + "</a>")
       $('#lieul_eu_irregular').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[11][2] + "</a>")
-      $('#linking_verbs').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[12][2] + "</a>")
-      $('#even_if').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[13][2] + "</a>")
-      $('#after_ing').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[14][2] + "</a>")
-//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[15][2] + "</a>")
-//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[16][2] + "</a>")
-//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[17][2] + "</a>")
-//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[18][2] + "</a>")
-//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[19][2] + "</a>")
-//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[20][2] + "</a>")
-//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[21][2] + "</a>")
-//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[22][2] + "</a>")
-//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[23][2] + "</a>")
-//      $('#').append("<a><span>" + data.all_topics[11][1] + "</span><br>" + data.all_topics[24][2] + "</a>")
+      $('#linking_verbs').append("<a><span>" + data.all_topics[12][1] + "</span><br>" + data.all_topics[12][2] + "</a>")
+      $('#even_if').append("<a><span>" + data.all_topics[13][1] + "</span><br>" + data.all_topics[13][2] + "</a>")
+      $('#after_ing').append("<a><span>" + data.all_topics[14][1] + "</span><br>" + data.all_topics[14][2] + "</a>")
+      $('#maybe_I_might').append("<a><span>" + data.all_topics[15][1] + "</span><br>" + data.all_topics[15][2] + "</a>")
+      $('#only').append("<a><span>" + data.all_topics[16][1] + "</span><br>" + data.all_topics[16][2] + "</a>")
+      $('#in_order_to').append("<a><span>" + data.all_topics[17][1] + "</span><br>" + data.all_topics[17][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[18][1] + "</span><br>" + data.all_topics[18][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[19][1] + "</span><br>" + data.all_topics[19][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[20][1] + "</span><br>" + data.all_topics[20][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[21][1] + "</span><br>" + data.all_topics[21][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[22][1] + "</span><br>" + data.all_topics[22][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[23][1] + "</span><br>" + data.all_topics[23][2] + "</a>")
+//      $('#').append("<a><span>" + data.all_topics[24][1] + "</span><br>" + data.all_topics[24][2] + "</a>")
 
 
 

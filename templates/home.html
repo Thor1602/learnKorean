@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block title %}Admin{% endblock %}
+{% block content %}
+<div id="content" class="p-4 p-md-5 mt-3 pt-5">
+    <button type="button" class="btn btn-warning"><a href="/admim">ADMIN</a></button>
+    <h1>Home</h1>
+</div>
+<script src="static/js/autoresize-textarea.js"></script>
+<script>
+    autoResizeTextarea(document.querySelectorAll("textarea.auto-resize"), { maxHeight: 1000 })
+</script>
+{% endblock %}

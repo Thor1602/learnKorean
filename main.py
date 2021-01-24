@@ -52,12 +52,12 @@ def topics():
             data = topic.check_topic()[13]
         elif 'after_ing' in request.form:
             data = topic.check_topic()[14]
-        # elif '' in request.form:
-        #     data = topic.check_topic()[15]
-        # elif '' in request.form:
-        #     data = topic.check_topic()[16]
-        # elif '' in request.form:
-        #     data = topic.check_topic()[17]
+        elif 'maybe_I_might' in request.form:
+            data = topic.check_topic()[15]
+        elif 'only' in request.form:
+            data = topic.check_topic()[16]
+        elif 'in_order_to' in request.form:
+            data = topic.check_topic()[17]
         # elif '' in request.form:
         #     data = topic.check_topic()[18]
         # elif '' in request.form:
@@ -85,10 +85,16 @@ def refresh():
 
 
 @app.route("/", methods=['GET', 'POST'])
-def home():
+def index():
     err = ''
     success = ''
     return render_template("index.html")
+
+@app.route("/home", methods=['GET', 'POST'])
+def home():
+    err = ''
+    success = ''
+    return render_template("home.html")
 
 @app.route("/admin", methods=['GET', 'POST'])
 def admin():
